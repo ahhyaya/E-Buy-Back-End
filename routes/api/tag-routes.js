@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
+const sequelize = require('../../config/connection');
 
 // The `/api/tags` endpoint
 
-router.get('/', async (req, res) => {
+router.get('/tags', async (req, res) => {
   // find all tags
   // be sure to include its associated Product data
   try {
@@ -16,7 +17,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/tags/:id', async (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
   try {
@@ -35,7 +36,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.post('/', async (req, res) => {
+router.post('/tags', async (req, res) => {
   // create a new tag
   try {
     const tag = await Tag.create(req.body);
@@ -45,11 +46,11 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.put('/:id', (req, res) => {
+router.put('/tags/:id', (req, res) => {
   // update a tag's name by its `id` value
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/tags/:id', async (req, res) => {
   // delete on tag by its `id` value
   try {
     const tag = await Tag.destroy({
