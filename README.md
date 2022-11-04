@@ -40,7 +40,7 @@
 
   ---
 
-  ## Command to Run Tests
+  ## Tests
   * N/A
   ---
   
