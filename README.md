@@ -21,7 +21,9 @@
    * development database is created and is seeded with test data
    * server is started and the Sequelize models are synced to the MySQL database
    * able to successfully create, update, and delete data in my database
-   ![feature1](./src/1.png)
+   ![feature1](./assets/1.png)
+   ![feature1](./assets/2.png)
+   ![feature1](./assets/3.png)
   ---
   ## Installation
   You’ll need to use the MySQL2Links to an external site. and SequelizeLinks to an external site. packages to connect your Express.js API to a MySQL database and the dotenv packageLinks to an external site. to use environment variables to store sensitive data
